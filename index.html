@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,31 +13,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
-        
+
         body {
             font-family: 'Be Vietnam Pro', sans-serif;
             scroll-behavior: smooth;
         }
-        
+
         .hero-gradient {
             background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
         }
-        
+
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        
+
         .floating {
             animation: floating 3s ease-in-out infinite;
         }
-        
+
         @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
-        
+
         .wave-shape {
             position: absolute;
             bottom: 0;
@@ -45,19 +54,20 @@
             overflow: hidden;
             line-height: 0;
         }
-        
+
         .wave-shape svg {
             position: relative;
             display: block;
             width: calc(100% + 1.3px);
             height: 150px;
         }
-        
+
         .wave-shape .shape-fill {
             fill: #FFFFFF;
         }
     </style>
 </head>
+
 <body class="bg-gray-50">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white shadow-md z-50">
@@ -65,7 +75,8 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <span class="text-indigo-600 font-bold text-2xl">IZ<span class="text-pink-500">Team</span></span>
+                        <span class="text-indigo-600 font-bold text-2xl">IZ<span
+                                class="text-pink-500">Team</span></span>
                     </div>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
@@ -73,27 +84,42 @@
                     <a href="#services" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Dịch vụ</a>
                     <a href="#portfolio" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Dự án</a>
                     <a href="#about" class="text-gray-900 hover:text-indigo-600 px-3 py-2 font-medium">Về chúng tôi</a>
-                    <a href="#contact" class="bg-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:bg-indigo-700 transition duration-300">Liên hệ</a>
+                    <a href="#contact"
+                        class="bg-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:bg-indigo-700 transition duration-300">Liên
+                        hệ</a>
                 </div>
                 <div class="-mr-2 flex items-center md:hidden">
-                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                    <button type="button" id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-indigo-600 hover:bg-gray-50">Trang chủ</a>
-                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-indigo-600 hover:bg-gray-50">Dịch vụ</a>
-                <a href="#portfolio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-indigo-600 hover:bg-gray-50">Dự án</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-indigo-600 hover:bg-gray-50">Về chúng tôi</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Liên hệ</a>
+                <a href="#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-indigo-600 hover:bg-gray-50">Trang
+                    chủ</a>
+                <a href="#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-indigo-600 hover:bg-gray-50">Dịch
+                    vụ</a>
+                <a href="#portfolio"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-indigo-600 hover:bg-gray-50">Dự
+                    án</a>
+                <a href="#about"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-indigo-600 hover:bg-gray-50">Về
+                    chúng tôi</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Liên
+                    hệ</a>
             </div>
         </div>
     </nav>
@@ -104,28 +130,36 @@
             <div class="relative z-10 md:flex md:items-center md:justify-between">
                 <div class="md:w-1/2 text-center md:text-left">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-normal mb-6">
-                        Đưa thương hiệu của bạn <span class="text-yellow-300">tỏa sáng</span> trên Facebook
+                        Đưa thương hiệu của bạn <span class="text-yellow-300 leading-normal">tỏa sáng</span> trên
+                        Facebook
                     </h1>
-                    <p class="text-xl text-white opacity-90 mb-8">
-                        IZTeam - Đối tác marketing Facebook hàng đầu với các giải pháp toàn diện từ thiết kế, content đến quảng cáo hiệu quả.
+                    <p class="text-xl text-white opacity-90 mb-4">
+                        IZTeam - Đối tác marketing Facebook hàng đầu với các giải pháp toàn diện từ thiết kế, content
+                        đến quảng cáo hiệu quả.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#contact" class="bg-white text-indigo-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 text-center">
+                        <a href="#contact"
+                            class="bg-white text-indigo-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300 text-center">
                             Liên hệ ngay
                         </a>
-                        <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:bg-opacity-10 transition duration-300 text-center">
+                        <a href="#services"
+                            class="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:bg-opacity-10 transition duration-300 text-center">
                             Dịch vụ của chúng tôi
                         </a>
                     </div>
                 </div>
                 <div class="hidden md:block md:w-1/2 mt-10 md:mt-0">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Social Media Marketing" class="rounded-xl shadow-2xl floating">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Social Media Marketing" class="rounded-xl shadow-2xl floating">
                 </div>
             </div>
         </div>
         <div class="wave-shape">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
             </svg>
         </div>
     </section>
@@ -161,10 +195,11 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Dịch vụ của chúng tôi</h2>
                 <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    IZTeam cung cấp các dịch vụ marketing Facebook toàn diện giúp thương hiệu của bạn tiếp cận đúng đối tượng và tăng trưởng bền vững.
+                    IZTeam cung cấp các dịch vụ marketing Facebook toàn diện giúp thương hiệu của bạn tiếp cận đúng đối
+                    tượng và tăng trưởng bền vững.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Service 1 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
@@ -174,7 +209,8 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Thiết kế hình ảnh</h3>
                         <p class="text-gray-600 mb-4">
-                            Thiết kế hình ảnh chuyên nghiệp, bắt mắt phù hợp với từng chiến dịch quảng cáo và đặc thù ngành hàng.
+                            Thiết kế hình ảnh chuyên nghiệp, bắt mắt phù hợp với từng chiến dịch quảng cáo và đặc thù
+                            ngành hàng.
                         </p>
                         <ul class="text-gray-600 space-y-2">
                             <li class="flex items-start">
@@ -192,7 +228,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Service 2 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
                     <div class="p-6">
@@ -201,7 +237,8 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Quay dựng video</h3>
                         <p class="text-gray-600 mb-4">
-                            Sản xuất video content chất lượng cao, tối ưu cho thuật toán Facebook, giúp tăng tương tác và chuyển đổi.
+                            Sản xuất video content chất lượng cao, tối ưu cho thuật toán Facebook, giúp tăng tương tác
+                            và chuyển đổi.
                         </p>
                         <ul class="text-gray-600 space-y-2">
                             <li class="flex items-start">
@@ -219,7 +256,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Service 3 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
                     <div class="p-6">
@@ -228,7 +265,8 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Đăng bài & Content</h3>
                         <p class="text-gray-600 mb-4">
-                            Lên kế hoạch content và đăng bài chiến lược, tối ưu thời gian đăng để đạt hiệu quả tương tác cao nhất.
+                            Lên kế hoạch content và đăng bài chiến lược, tối ưu thời gian đăng để đạt hiệu quả tương tác
+                            cao nhất.
                         </p>
                         <ul class="text-gray-600 space-y-2">
                             <li class="flex items-start">
@@ -246,7 +284,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Service 4 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
                     <div class="p-6">
@@ -287,68 +325,90 @@
                     Một số dự án nổi bật mà IZTeam đã thực hiện thành công cho khách hàng.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
                     <div class="relative overflow-hidden h-64">
-                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project 1" class="w-full h-full object-cover transition duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-indigo-600 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                            <a href="#" class="text-white font-bold px-6 py-3 border-2 border-white rounded-full hover:bg-white hover:text-indigo-600 transition duration-300">Xem chi tiết</a>
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Project 1" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-indigo-600 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <a href="#"
+                                class="text-white font-bold px-6 py-3 border-2 border-white rounded-full hover:bg-white hover:text-indigo-600 transition duration-300">Xem
+                                chi tiết</a>
                         </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Chiến dịch thời trang</h3>
                         <p class="text-gray-600 mb-4">Tăng doanh số 300% sau 3 tháng triển khai</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">Thiết kế</span>
-                            <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded">Quảng cáo</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Content</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">Thiết
+                                kế</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded">Quảng
+                                cáo</span>
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Content</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
                 <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
                     <div class="relative overflow-hidden h-64">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-indigo-600 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                            <a href="#" class="text-white font-bold px-6 py-3 border-2 border-white rounded-full hover:bg-white hover:text-indigo-600 transition duration-300">Xem chi tiết</a>
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-indigo-600 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <a href="#"
+                                class="text-white font-bold px-6 py-3 border-2 border-white rounded-full hover:bg-white hover:text-indigo-600 transition duration-300">Xem
+                                chi tiết</a>
                         </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Ra mắt sản phẩm mới</h3>
                         <p class="text-gray-600 mb-4">10.000+ tương tác trong tuần đầu tiên</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">Thiết kế</span>
-                            <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded">Video</span>
-                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Quảng cáo</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">Thiết
+                                kế</span>
+                            <span
+                                class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded">Video</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Quảng
+                                cáo</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 3 -->
                 <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
                     <div class="relative overflow-hidden h-64">
-                        <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project 3" class="w-full h-full object-cover transition duration-500 hover:scale-110">
-                        <div class="absolute inset-0 bg-indigo-600 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
-                            <a href="#" class="text-white font-bold px-6 py-3 border-2 border-white rounded-full hover:bg-white hover:text-indigo-600 transition duration-300">Xem chi tiết</a>
+                        <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Project 3" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-indigo-600 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                            <a href="#"
+                                class="text-white font-bold px-6 py-3 border-2 border-white rounded-full hover:bg-white hover:text-indigo-600 transition duration-300">Xem
+                                chi tiết</a>
                         </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Xây dựng thương hiệu</h3>
                         <p class="text-gray-600 mb-4">Tăng nhận diện thương hiệu 5 lần</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Content</span>
-                            <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded">Video</span>
-                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Quảng cáo</span>
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Content</span>
+                            <span
+                                class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded">Video</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Quảng
+                                cáo</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12">
-                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300">
+                <a href="#"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300">
                     Xem thêm dự án
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -361,18 +421,22 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="md:flex md:items-center md:space-x-12">
                 <div class="md:w-1/2 mb-10 md:mb-0">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="IZTeam" class="rounded-xl shadow-xl w-full">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="IZTeam" class="rounded-xl shadow-xl w-full">
                 </div>
                 <div class="md:w-1/2">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Về IZTeam</h2>
                     <div class="w-20 h-1 bg-indigo-600 mb-6"></div>
                     <p class="text-gray-600 mb-6">
-                        IZTeam được thành lập với sứ mệnh mang đến cho khách hàng những giải pháp marketing Facebook hiệu quả nhất. Với đội ngũ trẻ trung, sáng tạo và giàu kinh nghiệm, chúng tôi tự hào là đối tác đáng tin cậy của nhiều thương hiệu lớn nhỏ.
+                        IZTeam được thành lập với sứ mệnh mang đến cho khách hàng những giải pháp marketing Facebook
+                        hiệu quả nhất. Với đội ngũ trẻ trung, sáng tạo và giàu kinh nghiệm, chúng tôi tự hào là đối tác
+                        đáng tin cậy của nhiều thương hiệu lớn nhỏ.
                     </p>
                     <p class="text-gray-600 mb-8">
-                        Phương châm của chúng tôi: "Không chỉ là dịch vụ - mà là giải pháp toàn diện cho sự phát triển bền vững của doanh nghiệp bạn".
+                        Phương châm của chúng tôi: "Không chỉ là dịch vụ - mà là giải pháp toàn diện cho sự phát triển
+                        bền vững của doanh nghiệp bạn".
                     </p>
-                    
+
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                         <div class="flex items-start">
                             <div class="flex-shrink-0 bg-indigo-100 p-2 rounded-full mr-4">
@@ -389,7 +453,8 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-900 mb-1">Sứ mệnh</h4>
-                                <p class="text-gray-600">Mang lại giá trị thực sự cho khách hàng thông qua các giải pháp sáng tạo</p>
+                                <p class="text-gray-600">Mang lại giá trị thực sự cho khách hàng thông qua các giải pháp
+                                    sáng tạo</p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -407,12 +472,14 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-900 mb-1">Đội ngũ</h4>
-                                <p class="text-gray-600">10+ chuyên gia giàu kinh nghiệm trong lĩnh vực Digital Marketing</p>
+                                <p class="text-gray-600">10+ chuyên gia giàu kinh nghiệm trong lĩnh vực Digital
+                                    Marketing</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300">
+
+                    <a href="#contact"
+                        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300">
                         Liên hệ với chúng tôi
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
@@ -431,7 +498,7 @@
                     Những phản hồi chân thực từ khách hàng đã hợp tác với chúng tôi
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Testimonial 1 -->
                 <div class="bg-gray-50 p-8 rounded-xl shadow-md">
@@ -445,17 +512,19 @@
                         </div>
                     </div>
                     <p class="text-gray-600 mb-6 italic">
-                        "IZTeam đã giúp chúng tôi tăng doanh số đáng kể chỉ sau 2 tháng hợp tác. Dịch vụ chuyên nghiệp, hỗ trợ nhiệt tình và luôn đưa ra những giải pháp sáng tạo."
+                        "IZTeam đã giúp chúng tôi tăng doanh số đáng kể chỉ sau 2 tháng hợp tác. Dịch vụ chuyên nghiệp,
+                        hỗ trợ nhiệt tình và luôn đưa ra những giải pháp sáng tạo."
                     </p>
                     <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 1" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 1"
+                            class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-900">Chị Nguyễn Thị Mai</h4>
                             <p class="text-gray-600 text-sm">Giám đốc Thời trang MAI</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Testimonial 2 -->
                 <div class="bg-gray-50 p-8 rounded-xl shadow-md">
                     <div class="flex items-center mb-4">
@@ -468,17 +537,19 @@
                         </div>
                     </div>
                     <p class="text-gray-600 mb-6 italic">
-                        "Content và hình ảnh IZTeam làm rất sáng tạo, thu hút. Fanpage của chúng tôi tăng từ 5.000 lên 25.000 like chỉ trong 3 tháng. Rất hài lòng với dịch vụ!"
+                        "Content và hình ảnh IZTeam làm rất sáng tạo, thu hút. Fanpage của chúng tôi tăng từ 5.000 lên
+                        25.000 like chỉ trong 3 tháng. Rất hài lòng với dịch vụ!"
                     </p>
                     <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 2" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 2"
+                            class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-900">Anh Trần Văn Nam</h4>
                             <p class="text-gray-600 text-sm">Chủ cửa hàng mỹ phẩm NAM'S</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Testimonial 3 -->
                 <div class="bg-gray-50 p-8 rounded-xl shadow-md">
                     <div class="flex items-center mb-4">
@@ -491,10 +562,12 @@
                         </div>
                     </div>
                     <p class="text-gray-600 mb-6 italic">
-                        "Chi phí quảng cáo giảm 30% nhưng hiệu quả lại tăng gấp đôi nhờ chiến lược của IZTeam. Team làm việc rất có tâm và luôn lắng nghe ý kiến khách hàng."
+                        "Chi phí quảng cáo giảm 30% nhưng hiệu quả lại tăng gấp đôi nhờ chiến lược của IZTeam. Team làm
+                        việc rất có tâm và luôn lắng nghe ý kiến khách hàng."
                     </p>
                     <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client 3" class="w-12 h-12 rounded-full mr-4">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client 3"
+                            class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-900">Chị Lê Thị Hương</h4>
                             <p class="text-gray-600 text-sm">Giám đốc Nhà hàng Hương Việt</p>
@@ -508,11 +581,13 @@
     <!-- CTA Section -->
     <section class="py-20 hero-gradient">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Sẵn sàng đưa doanh nghiệp của bạn lên tầm cao mới?</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Sẵn sàng đưa doanh nghiệp của bạn lên tầm cao
+                mới?</h2>
             <p class="text-xl text-white opacity-90 mb-8 max-w-3xl mx-auto">
                 Hãy để IZTeam đồng hành cùng bạn trên hành trình chinh phục khách hàng qua nền tảng mạng xã hội.
             </p>
-            <a href="#contact" class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-bold rounded-full shadow-sm text-indigo-600 bg-white hover:bg-gray-100 transition duration-300">
+            <a href="#contact"
+                class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-bold rounded-full shadow-sm text-indigo-600 bg-white hover:bg-gray-100 transition duration-300">
                 Bắt đầu ngay
                 <i class="fas fa-arrow-right ml-3"></i>
             </a>
@@ -527,9 +602,10 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Liên hệ với chúng tôi</h2>
                     <div class="w-20 h-1 bg-indigo-600 mb-6"></div>
                     <p class="text-gray-600 mb-8">
-                        Bạn có câu hỏi hay cần tư vấn về dịch vụ của IZTeam? Hãy điền thông tin vào form bên cạnh hoặc liên hệ trực tiếp với chúng tôi qua các kênh dưới đây.
+                        Bạn có câu hỏi hay cần tư vấn về dịch vụ của IZTeam? Hãy điền thông tin vào form bên cạnh hoặc
+                        liên hệ trực tiếp với chúng tôi qua các kênh dưới đây.
                     </p>
-                    
+
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-full mr-4">
@@ -540,7 +616,7 @@
                                 <p class="text-gray-600">TP.HCM</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
                             <div class="flex-shrink-0 bg-pink-100 p-3 rounded-full mr-4">
                                 <i class="fas fa-phone-alt text-pink-600"></i>
@@ -550,7 +626,7 @@
                                 <p class="text-gray-600">0813.467.885</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
                             <div class="flex-shrink-0 bg-blue-100 p-3 rounded-full mr-4">
                                 <i class="fas fa-envelope text-blue-600"></i>
@@ -560,7 +636,7 @@
                                 <p class="text-gray-600">izteam.work25525@gmail.com</p>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-start">
                             <div class="flex-shrink-0 bg-purple-100 p-3 rounded-full mr-4">
                                 <i class="fas fa-clock text-purple-600"></i>
@@ -571,43 +647,56 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="mt-8">
                         <h4 class="font-bold text-gray-900 mb-4">Kết nối với chúng tôi</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition duration-300">
+                            <a href="#"
+                                class="bg-indigo-600 text-white p-3 rounded-full hover:bg-indigo-700 transition duration-300">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition duration-300">
+                            <a href="#"
+                                class="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition duration-300">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition duration-300">
+                            <a href="#"
+                                class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition duration-300">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#" class="bg-blue-700 text-white p-3 rounded-full hover:bg-blue-800 transition duration-300">
+                            <a href="#"
+                                class="bg-blue-700 text-white p-3 rounded-full hover:bg-blue-800 transition duration-300">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="md:w-1/2">
-                    <form class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <form class="bg-gray-50 p-8 rounded-xl shadow-md" action="https://api.web3forms.com/submit"
+                        method="POST">
+                        <input type="hidden" name="access_key" value="3d82467b-80ec-445a-b18f-f2878399dbf8">
                         <div class="mb-6">
                             <label for="name" class="block text-gray-700 font-medium mb-2">Họ và tên</label>
-                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Nhập họ tên của bạn">
+                            <input name="Họ và tên" type="text" id="name"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                placeholder="Nhập họ tên của bạn">
                         </div>
                         <div class="mb-6">
                             <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Nhập email của bạn">
+                            <input name="Email" type="email" id="mail"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                placeholder="Nhập email của bạn">
                         </div>
                         <div class="mb-6">
                             <label for="phone" class="block text-gray-700 font-medium mb-2">Số điện thoại</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Nhập số điện thoại">
+                            <input name="Số điện thoại" type="tel" id="phone"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                placeholder="Nhập số điện thoại">
                         </div>
                         <div class="mb-6">
                             <label for="service" class="block text-gray-700 font-medium mb-2">Dịch vụ quan tâm</label>
-                            <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            <select name="Dịch Vụ" id="service" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
                                 <option value="">Chọn dịch vụ</option>
                                 <option value="design">Thiết kế hình ảnh</option>
                                 <option value="video">Quay dựng video</option>
@@ -618,12 +707,18 @@
                         </div>
                         <div class="mb-6">
                             <label for="message" class="block text-gray-700 font-medium mb-2">Nội dung</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Nhập nội dung bạn muốn tư vấn"></textarea>
+                            <textarea id="message" rows="4" name ="Tin nhắn"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                placeholder="Nhập nội dung bạn muốn tư vấn"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-3 rounded-full font-bold hover:bg-indigo-700 transition duration-300">
+                        <!-- Honeypot Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <button type="submit"
+                            class="w-full bg-indigo-600 text-white px-6 py-3 rounded-full font-bold hover:bg-indigo-700 transition duration-300">
                             Gửi yêu cầu
                             <i class="fas fa-paper-plane ml-2"></i>
                         </button>
+
                     </form>
                 </div>
             </div>
@@ -643,20 +738,29 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Dịch vụ</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Thiết kế hình ảnh</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Quay dựng video</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Đăng bài & Content</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Chạy quảng cáo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Thiết kế hình
+                                ảnh</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Quay dựng
+                                video</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Đăng bài &
+                                Content</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Chạy quảng
+                                cáo</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Liên kết</h4>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Trang chủ</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Dịch vụ</a></li>
-                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition duration-300">Dự án</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">Về chúng tôi</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Liên hệ</a></li>
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Trang chủ</a>
+                        </li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Dịch
+                                vụ</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition duration-300">Dự
+                                án</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">Về chúng
+                                tôi</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Liên
+                                hệ</a></li>
                     </ul>
                 </div>
                 <div>
@@ -665,8 +769,10 @@
                         Nhận thông tin mới nhất về các chiến dịch marketing hiệu quả.
                     </p>
                     <form class="flex">
-                        <input type="email" placeholder="Email của bạn" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
-                        <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition duration-300">
+                        <input type="email" placeholder="Email của bạn"
+                            class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
+                        <button type="submit"
+                            class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition duration-300">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
@@ -674,7 +780,7 @@
             </div>
             <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400 text-sm mb-4 md:mb-0">
-                    &copy; 2025 IZTeam. Tất cả quyền được bảo lưu.
+                    &copy; IZTeam. Tất cả quyền được bảo lưu. 
                 </p>
                 <div class="flex space-x-6">
                     <a href="#" class="text-gray-400 hover:text-white transition duration-300">
@@ -696,7 +802,7 @@
 
     <script>
         // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
@@ -705,17 +811,17 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     // Close mobile menu if open
                     const mobileMenu = document.getElementById('mobile-menu');
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
                     }
-                    
+
                     // Scroll to target
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
@@ -726,28 +832,31 @@
         });
 
         // Form submission
-        const contactForm = document.querySelector('form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form values
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const phone = document.getElementById('phone').value;
-                const service = document.getElementById('service').value;
-                const message = document.getElementById('message').value;
-                
-                // Here you would typically send the data to a server
-                console.log('Form submitted:', { name, email, phone, service, message });
-                
-                // Show success message
-                alert('Cảm ơn bạn đã gửi yêu cầu! IZTeam sẽ liên hệ với bạn trong thời gian sớm nhất.');
-                
-                // Reset form
-                contactForm.reset();
-            });
-        }
+        // const contactForm = document.querySelector('form');
+        // if (contactForm) {
+        //     contactForm.addEventListener('submit', function (e) {
+        //         e.preventDefault();
+
+        //         // Get form values
+        //         const name = document.getElementById('name').value;
+        //         const email = document.getElementById('email').value;
+        //         const phone = document.getElementById('phone').value;
+        //         const service = document.getElementById('service').value;
+        //         const message = document.getElementById('message').value;
+
+        //         // Here you would typically send the data to a server
+        //         console.log('Form submitted:', { name, email, phone, service, message });
+
+        //         // Show success message
+        //         alert('Cảm ơn bạn đã gửi yêu cầu! IZTeam sẽ liên hệ với bạn trong thời gian sớm nhất.');
+
+        //         // Reset form
+        //         contactForm.reset();
+        //     });
+        // }
+
+
     </script>
 </body>
+
 </html>
